@@ -1,0 +1,13 @@
+body {
+  background-color: yellow;
+}
+h1 {
+  color: green;
+}
+
+.button {
+  height: 25px;
+  width: auto;
+  background-color: blue;
+  color: white;
+}
