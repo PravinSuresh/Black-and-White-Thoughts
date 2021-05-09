@@ -1,13 +1,151 @@
-body {
-  background-color: yellow;
-}
-h1 {
-  color: green;
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
-.button {
-  height: 25px;
-  width: auto;
-  background-color: blue;
+::selection {
+  background-color: black;
   color: white;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  width: fit-content;
+}
+.navigation {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  width: auto;
+  text-align: center;
+}
+.navigation::selection,
+.footer::selection {
+  background-color: white;
+  color: black;
+}
+.section-image-text::selection {
+  background-color: black;
+  color: white;
+}
+h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  width: fit-content;
+}
+
+li,
+.header-footer-text,
+a {
+  font-size: 2rem;
+  color: rgb(138, 138, 138);
+  list-style: none;
+  margin: 2rem;
+  width: auto;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.header-footer-text {
+  margin-top: 4rem;
+}
+
+li:hover {
+  color: white;
+  cursor: pointer;
+}
+.brand-container {
+  height: 10rem;
+  width: 10rem;
+}
+.brand {
+  border-radius: 50%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .navigation {
+    justify-content: space-between;
+    padding: 2rem;
+  }
+}
+
+.section-image-text {
+  width: 90vw;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+  justify-items: center;
+  margin-bottom: 1rem;
+}
+.section-image-text:first-of-type {
+  margin-top: 15rem;
+}
+.section-image {
+  height: auto;
+  width: 250px;
+  overflow: hidden;
+}
+.section-image > img {
+  width: 100%;
+  object-fit: cover;
+}
+.section-text {
+  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .section-image-text {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 10rem auto;
+  }
+  .section-image-text:nth-of-type(even) .section-image {
+    order: 2;
+  }
+}
+
+.hero {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  margin-bottom: 0%;
+  bottom: 0;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+.tiny-note {
+  font-size: 1rem;
+}
+
+.footer li:hover {
+  cursor: none;
 }
